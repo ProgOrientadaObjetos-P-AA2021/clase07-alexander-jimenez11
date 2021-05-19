@@ -12,7 +12,7 @@ import paquete1.Profesor;
  *
  * @author reroes
  */
-public class ManejoArrayList {
+public class ManejoArrayList1 {
 
     public static void main(String[] args) {
         Profesor prof1 = new Profesor("Joseph Jimenez", "facturado");
@@ -24,26 +24,33 @@ public class ManejoArrayList {
         profesores[1] = prof2;
 
         for (int i = 0; i < profesores.length; i++) {
-            System.out.printf("%s - %s\n", profesores[i].obtenerNombre(),
-                    profesores[i].obtenerTipo());
+          //  System.out.printf("%s - %s\n", profesores[i].obtenerNombre(),
+            //        profesores[i].obtenerTipo());
         }
 
         System.out.println("-----------------------------");
 
-        // ArrayList
+       
         ArrayList<Profesor> profesores2 = new ArrayList<>();
         profesores2.add(prof1);
         profesores2.add(prof2);
+   
+        Profesor temporal = profesores2.get(0);
+        System.out.println(temporal.obtenerTipo());
 
-        for (int i = 0; i < profesores2.size(); i++) {
+       /* for (int i = 0; i < profesores2.size(); i++) {
             System.out.printf("%s - %s\n", profesores2.get(i).obtenerNombre(),
                     profesores2.get(i).obtenerTipo());
-        }
+        }*/
 
         System.out.println("-----------------------------");
 
         Profesor prof3 = new Profesor("Melissa Gilbert", "contratado");
+        Profesor prof4 = new Profesor("Manuel Pedraza", "desconocido");
+        Profesor prof5 = new Profesor("Maria Perez", "contratado");
         profesores2.add(prof3);
+        profesores2.add(prof4);
+        profesores2.add(prof5);
 
         for (int i = 0; i < profesores2.size(); i++) {
             System.out.printf("%s - %s\n", profesores2.get(i).obtenerNombre(),
