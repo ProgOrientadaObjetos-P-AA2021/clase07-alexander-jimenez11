@@ -1,6 +1,8 @@
-package paquete6;
+package paquete4;
 
-public class Hospital {
+import java.io.Serializable;
+
+public class Hospital implements Serializable {
 
     private String nombre;
     private int numeroCamas;

@@ -13,13 +13,13 @@ public class Ejecutor {
 
         // nombre del archivo
         String nombreArchivo = "profesores.data";
-        
+
         Profesor profesor1 = new Profesor("Tara Hernandez", "contratado");
         Profesor profesor2 = new Profesor("Gregory Walsh", "nombramiento");
         Profesor profesor3 = new Profesor("Kevin Page", "nombramiento");
 
         EscrituraArchivoSecuencial archivo = new EscrituraArchivoSecuencial(nombreArchivo);
-        
+
         // establecer el valor del atributo registro
         archivo.establecerRegistroProfesor(profesor1);
         // establecer en el archivo el atributo del registro
@@ -29,7 +29,7 @@ public class Ejecutor {
         archivo.establecerRegistroProfesor(profesor3);
         archivo.establecerSalida();
         archivo.cerrarArchivo();
-        
+
         LecturaArchivoSecuencial lectura = new LecturaArchivoSecuencial(nombreArchivo);
         lectura.establecerProfesores();
         System.out.println(lectura);
